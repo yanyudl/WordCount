@@ -28,7 +28,9 @@ public class WordCount {
             while((ch = reader.read()) != -1){
                 if(Character.isWhitespace((char) ch)){//判断是否有空格、换行符、tab键等的空白字符
                     count++;
-                } 
+                } else if ((char) ch == ',') {
+                    count++;
+                }
             }
 
             count++;//最后一个单词后没有空白字符，所以要加上1
